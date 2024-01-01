@@ -1,4 +1,4 @@
-package com.yupi.usercenter.common;
+package com.mhx.usercenter.common;
 
 // 讲师 【coder_鱼_皮】 https://space.bilibili.com/12890453/
 

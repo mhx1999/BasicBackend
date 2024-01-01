@@ -1,12 +1,12 @@
-package com.yupi.usercenter.service.impl;
+package com.mhx.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.usercenter.common.ErrorCode;
-import com.yupi.usercenter.exception.BusinessException;
-import com.yupi.usercenter.model.domain.User;
-import com.yupi.usercenter.service.UserService;
-import com.yupi.usercenter.mapper.UserMapper;
+import com.mhx.usercenter.common.ErrorCode;
+import com.mhx.usercenter.exception.BusinessException;
+import com.mhx.usercenter.model.domain.User;
+import com.mhx.usercenter.service.UserService;
+import com.mhx.usercenter.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.yupi.usercenter.contant.UserConstant.USER_LOGIN_STATE;
+import static com.mhx.usercenter.contant.UserConstant.USER_LOGIN_STATE;
 
 /**
  * 用户服务实现类

@@ -1,26 +1,24 @@
-package com.yupi.usercenter.controller;
+package com.mhx.usercenter.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fasterxml.jackson.databind.ser.Serializers;
-import com.yupi.usercenter.common.BaseResponse;
-import com.yupi.usercenter.common.ErrorCode;
-import com.yupi.usercenter.common.ResultUtils;
-import com.yupi.usercenter.exception.BusinessException;
-import com.yupi.usercenter.model.domain.User;
-import com.yupi.usercenter.model.domain.request.UserLoginRequest;
-import com.yupi.usercenter.model.domain.request.UserRegisterRequest;
-import com.yupi.usercenter.service.UserService;
+import com.mhx.usercenter.common.BaseResponse;
+import com.mhx.usercenter.common.ErrorCode;
+import com.mhx.usercenter.common.ResultUtils;
+import com.mhx.usercenter.exception.BusinessException;
+import com.mhx.usercenter.model.domain.User;
+import com.mhx.usercenter.model.domain.request.UserLoginRequest;
+import com.mhx.usercenter.model.domain.request.UserRegisterRequest;
+import com.mhx.usercenter.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.yupi.usercenter.contant.UserConstant.ADMIN_ROLE;
-import static com.yupi.usercenter.contant.UserConstant.USER_LOGIN_STATE;
+import static com.mhx.usercenter.contant.UserConstant.ADMIN_ROLE;
+import static com.mhx.usercenter.contant.UserConstant.USER_LOGIN_STATE;
 
 /**
  * 用户接口

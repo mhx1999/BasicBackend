@@ -1,6 +1,6 @@
-package com.yupi.usercenter.mapper;
+package com.mhx.usercenter.mapper;
 
-import com.yupi.usercenter.model.domain.User;
+import com.mhx.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

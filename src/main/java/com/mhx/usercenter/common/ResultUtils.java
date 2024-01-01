@@ -1,4 +1,4 @@
-package com.yupi.usercenter.common;
+package com.mhx.usercenter.common;
 
 /**
  * 返回工具类
