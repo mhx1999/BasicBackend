@@ -1,4 +1,4 @@
-package com.mhx.usercenter.common;
+package com.mhx.basic.common;
 
 import lombok.Data;
 

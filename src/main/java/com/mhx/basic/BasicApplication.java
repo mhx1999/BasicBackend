@@ -1,4 +1,4 @@
-package com.mhx.usercenter;
+package com.mhx.basic;
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,13 +10,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-@MapperScan("com.mhx.usercenter.mapper")
-public class UserCenterApplication {
+@MapperScan("com.mhx.basic.mapper")
+public class BasicApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserCenterApplication.class, args);
+        SpringApplication.run(BasicApplication.class, args);
 
-        System.out.println("success delete~");
+
     }
 
 }

@@ -1,14 +1,14 @@
-package com.mhx.usercenter.controller;
+package com.mhx.basic.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.mhx.usercenter.common.BaseResponse;
-import com.mhx.usercenter.common.ErrorCode;
-import com.mhx.usercenter.common.ResultUtils;
-import com.mhx.usercenter.exception.BusinessException;
-import com.mhx.usercenter.model.domain.User;
-import com.mhx.usercenter.model.domain.request.UserLoginRequest;
-import com.mhx.usercenter.model.domain.request.UserRegisterRequest;
-import com.mhx.usercenter.service.UserService;
+import com.mhx.basic.common.BaseResponse;
+import com.mhx.basic.common.ErrorCode;
+import com.mhx.basic.common.ResultUtils;
+import com.mhx.basic.exception.BusinessException;
+import com.mhx.basic.model.domain.User;
+import com.mhx.basic.model.domain.request.UserLoginRequest;
+import com.mhx.basic.model.domain.request.UserRegisterRequest;
+import com.mhx.basic.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,14 +17,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.mhx.usercenter.contant.UserConstant.ADMIN_ROLE;
-import static com.mhx.usercenter.contant.UserConstant.USER_LOGIN_STATE;
+import static com.mhx.basic.contant.UserConstant.ADMIN_ROLE;
+import static com.mhx.basic.contant.UserConstant.USER_LOGIN_STATE;
 
 /**
  * 用户接口
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * 
+ * 
  */
 @RestController
 @RequestMapping("/user")
@@ -48,11 +48,10 @@ public class UserController {
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
         String checkPassword = userRegisterRequest.getCheckPassword();
-        String planetCode = userRegisterRequest.getPlanetCode();
-        if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword, planetCode)) {
+        if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword)) {
             return null;
         }
-        long result = userService.userRegister(userAccount, userPassword, checkPassword, planetCode);
+        long result = userService.userRegister(userAccount, userPassword, checkPassword);
         return ResultUtils.success(result);
     }
 
@@ -112,7 +111,6 @@ public class UserController {
         return ResultUtils.success(safetyUser);
     }
 
-    // https://yupi.icu/
 
     @GetMapping("/search")
     public BaseResponse<List<User>> searchUsers(String username, HttpServletRequest request) {
@@ -140,7 +138,6 @@ public class UserController {
         return ResultUtils.success(b);
     }
 
-    // [鱼皮的学习圈](https://yupi.icu) 从 0 到 1 求职指导，斩获 offer！1 对 1 简历优化服务、2000+ 求职面试经验分享、200+ 真实简历和建议参考、25w 字前后端精选面试题
 
     /**
      * 是否为管理员
